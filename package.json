@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "app/src/server.js",
+  "scripts": {
+    "start": "fastify start -l info app/src/server.js",
+    "start:prd": "node dist/backend.bundle.js",
+    "start:dev": "fastify start -w -l info -P app/src/server.js",
+    "build:prd": "webpack --config ./webpack.config.js --mode=production"
+  },
+  "dependencies": {
+    "babel-loader": "^8.2.5",
+    "fastify": "^3.29.0",
+    "init": "^0.1.2",
+    "node": "^17.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "fastify-cli": "^3.1.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
